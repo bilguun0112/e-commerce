@@ -5,7 +5,6 @@ import Dropdown from 'react-bootstrap/Dropdown';
 // import DropdownButton from 'react-bootstrap/DropdownButton';
 
 export default function MainMenu() {
-
     const subMenus = menus.map(subMenu => {
         return (
             <SubMenu
@@ -18,28 +17,40 @@ export default function MainMenu() {
 
 
     return (
-        <div className="container d-flex align-items-center bg-light justify-content-around">
+        <>
+            <style type="text/css">{
+                `
+            .lenght{
+                width: 218px;
+                height: 70px;
+            }
+            `
+            }
 
-           <div className="bg-warning">
-           <Dropdown id="DropDown-One" className="d-flex align-items-center">
-                <Dropdown.Toggle variant="warning" id="dropdown-basic" className="w-100">
-                    Dropdown Button
-                </Dropdown.Toggle>
+            </style>
+            <div className="container d-flex align-items-center bg-light justify-content-around">
 
-                <Dropdown.Menu>
-                    <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                    <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                    <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-                </Dropdown.Menu>
-            </Dropdown>
-           </div>
+                <div className="bg-warning">
+                    <Dropdown id="DropDown-One" className="d-flex align-items-center">
+                        <Dropdown.Toggle variant="warning" id="dropdown-basic" className="lenght">
+                            Dropdown Button
+                        </Dropdown.Toggle>
 
-            <Navbar bg="light" expand="lg">
-                {subMenus}
-            </Navbar>
-            <a href="#" className="text-end text-decoration-none fw-bold" >30 Days Free Return</a>
+                        <Dropdown.Menu>
+                            <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                            <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+                            <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                        </Dropdown.Menu>
+                    </Dropdown>
+                </div>
 
-        </div>
+                <Navbar bg="light" expand="lg">
+                    {subMenus}
+                </Navbar>
+                <a href="#" className="text-end text-decoration-none fw-bold" >30 Days Free Return</a>
+
+            </div>
+        </>
     )
 }
 

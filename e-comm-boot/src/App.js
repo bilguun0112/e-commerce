@@ -3,6 +3,7 @@ import './App.css';
 
 import { Help,  Search } from './components/help';
 import MainMenu from './components/MainMenu';
+import Banner from './components/banner';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Help/>
       <Search/>
       <MainMenu/>
+      <Banner/>
     </div>
   );
 }
