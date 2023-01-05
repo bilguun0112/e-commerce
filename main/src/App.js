@@ -1,5 +1,7 @@
 import './App.css';
-import {Frame4,Frame11} from './top';
+import Header from './components/header';
+import Header1 from './components/header copy';
+import {Frame4,Frame11} from './components/top';
 
 function App() {
   return (

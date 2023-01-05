@@ -26,7 +26,7 @@ function Frame11() {
             </div>
             <div className="flex gap-2 h-6">
                     <img src="images/user.png" alt="" />
-                    <p className="mx-1">Sign in</p>
+                    <p className="mx-1 text-white">Sign in</p>
                     <img src="images/heart.png" alt="" />
                     <p className="bg-btnColor w-max rounded-full text-white px-1">0</p>
                     <img src="images/shopping-cart.png" alt="" />
