@@ -14,6 +14,9 @@ function App() {
       <Banner/>
     </div>
   );
+
+
+  
 }
 
 export default App;
