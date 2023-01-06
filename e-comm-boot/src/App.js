@@ -16,7 +16,7 @@ function App() {
       <MainMenu/>
       <Banner/>
       <Catalogies/>
-      <Gallery />
+      {/* <Gallery /> */}
     </div>
   );
 
