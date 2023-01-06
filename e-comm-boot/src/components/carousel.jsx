@@ -1,32 +1,27 @@
+import product from "../Data/product"
+import AliceCarousel from 'react-alice-carousel'
 import Button from 'react-bootstrap/Button';
 
-import product from '../Data/product';
-
-
 export default function Banner() {
-    // const e = product[0];
-    const mainBanner = product.map(props => {
-        console.log(props.id);
+    const images = product.map(data => {
         return (
-
-        <div className="d-flex justify-content-between container padd">
-            <div className='d-flex flex-column justify-content-center'>
-                <h1>{props.title}</h1>
-                <div>
-                    <Button variant='warning' size="xxl">Shop now</Button>
-                    <Button variant='outline-secondary' size='xxl'>View more</Button>
+            <div className="d-flex justify-content-between container padd">
+                <div className='d-flex flex-column justify-content-center'>
+                    <h1>{data.title}</h1>
+                    <div>
+                        <Button variant='warning' size="xxl">Shop now</Button>
+                        <Button variant='outline-secondary' size='xxl'>View more</Button>
+                    </div>
+                </div>
+                <div className='position-relative'>
+                    <img className='img-fluid p-1' src={data.img} alt="" id='bannerImg' />
+                    <div className='rounded-circle position-absolute marg text-light price'>
+                        only <br /> {data.price}
+                    </div>
                 </div>
             </div>
-            <div className='position-relative'>
-                <img className='img-fluid p-1' src={props.img} alt="" id='bannerImg' />
-                <div className='rounded-circle position-absolute marg text-light price'>
-                    only <br /> {props.price}
-                </div>
-            </div>
-        </div>
         )
     })
-
     return (
         <>
             <style type='text/css'>
@@ -70,7 +65,10 @@ export default function Banner() {
     }
     `}
             </style>
-            {mainBanner}
+            <AliceCarousel autoPlay autoPlayInterval="3000" disableButtonsControls="true">
+                {images}
+            </AliceCarousel>
         </>
     )
+
 }
