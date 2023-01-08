@@ -4,8 +4,8 @@ import './App.css';
 import { Help,  Search } from './components/help';
 import MainMenu from './components/MainMenu';
 import Banner from './components/carousel';
-import Catalogies from './components/catalogi';
-import Gallery from './components/sliderTest';
+import Catalogies1 from './components/catalogi1';
+import ProductCard from './components/productCard';
 
 
 function App() {
@@ -15,8 +15,8 @@ function App() {
       <Search/>
       <MainMenu/>
       <Banner/>
-      <Catalogies/>
-      {/* <Gallery /> */}
+      <Catalogies1/>
+      <ProductCard/>
     </div>
   );
 
