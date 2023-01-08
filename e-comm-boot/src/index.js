@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import "react-alice-carousel/lib/alice-carousel.css";
+import 'react-multi-carousel/lib/styles.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
