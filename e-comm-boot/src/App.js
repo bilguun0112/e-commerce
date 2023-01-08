@@ -11,11 +11,11 @@ import ProductCard from './components/productCard';
 function App() {
   return (
     <div className="container">
-      <Help/>
+      {/* <Help/>
       <Search/>
       <MainMenu/>
       <Banner/>
-      <Catalogies1/>
+      <Catalogies1/> */}
       <ProductCard/>
     </div>
   );
