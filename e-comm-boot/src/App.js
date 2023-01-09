@@ -5,18 +5,20 @@ import { Help,  Search } from './components/help';
 import MainMenu from './components/MainMenu';
 import Banner from './components/carousel';
 import Catalogies1 from './components/catalogi1';
-import ProductCard from './components/productCard';
+import SubproductCard from './components/subProductCard';
+
 
 
 function App() {
   return (
     <div className="container">
-      {/* <Help/>
+      <Help/>
       <Search/>
       <MainMenu/>
-      <Banner/>
-      <Catalogies1/> */}
-      <ProductCard/>
+       <Banner/>
+      <Catalogies1/>
+     <SubproductCard />
+   
     </div>
   );
 

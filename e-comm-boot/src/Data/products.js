@@ -35,7 +35,7 @@ const products = [
             },
             {
                 device: 'Speaker',
-                itemName: 'Mega sound speaker',
+                itemName: 'Mega sound',
                 id: "5",
                 img: 'https://cdn.ihomeaudio.com/media/product/images/iBT800B_gradient1.jpg.450x400_q85.jpg',
                 price: '75 $'
@@ -135,7 +135,7 @@ const products = [
             },
             {
                 device: 'Camera',
-                itemName: 'Canon EOS Rebel T7',
+                itemName: 'Canon EOS T7',
                 id: "16",
                 img: 'https://target.scene7.com/is/image/Target/GUEST_1bf09891-44f5-4992-a411-5c67721b759f',
                 price: '549 $'
@@ -223,7 +223,7 @@ const products = [
             },
             {
                 device: 'Game console',
-                itemName: 'Sony PlayStation Portable (PSP) 3000 ',
+                itemName: '(PSP) 3000 ',
                 id: "26",
                 img: 'https://m.media-amazon.com/images/I/31CQEssDbYL.jpg',
                 price: '201 $'
