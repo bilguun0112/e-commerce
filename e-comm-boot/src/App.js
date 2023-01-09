@@ -6,6 +6,7 @@ import MainMenu from './components/MainMenu';
 import Banner from './components/carousel';
 import Catalogies1 from './components/catalogi1';
 import SubproductCard from './components/subProductCard';
+import HalfRating from './components/ratingStar';
 
 
 

@@ -237,4 +237,5 @@ const carData =
         },
     ]
 
+    carData.sort( () => Math.random() - 0.5);
     export default carData;
