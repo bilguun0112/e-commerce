@@ -1,5 +1,6 @@
 import Slider from "react-slick"
 import carData from "../Data/carData"
+import HalfRating from "./ratingStar";
 
 const SubproductCard = () => {
     const settings = {
@@ -27,7 +28,7 @@ const SubproductCard = () => {
                             <div>{item.itemName}</div>
                             <div>{item.price}</div>
                             <div>
-                                Rating StartD
+                                <HalfRating/>
                             </div>
                         </div>
                         <div>
