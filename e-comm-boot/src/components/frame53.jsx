@@ -8,7 +8,7 @@ export default function Frame53() {
                     <div className="w-50 p-2">
                         <img className="img-fluid" src={carData[number].img} alt="" />
                     </div>
-                    <div className="d-flex flex-column justify-content-center align-items-start">
+                    <div className="w-50 d-flex flex-column justify-content-center align-items-start">
                         <div>
                             {carData[number].itemName}
                         </div>
@@ -34,7 +34,7 @@ export default function Frame53() {
             <div className="container m-2 h-100 border rounded">
                 <div className="d-flex justify-content-evenly p-3">
                     <div className="w-50">
-                        <img className="img-fluid" style={{ height: "474px"}} src={carData[number].img} alt="" />
+                        <img className="img-fluid" style={{ height: "474px" }} src={carData[number].img} alt="" />
                     </div>
                     <div className="d-flex flex-column justify-content-center align-items-start">
                         <div>
@@ -46,8 +46,10 @@ export default function Frame53() {
                         <div>
                             <HalfRating />
                         </div>
-                        <div style={{ backgroundColor: "#87BCD9", color: "#272727", padding: "8px 14px" }} className="rounded">
-                            Add to Card
+                        <div style={{ backgroundColor: "#87BCD9", color: "#272727", padding: "8px 14px" }} className="rounded d-flex gap-4 align-items-center">
+                            <div>
+                                Add to Card
+                            </div>
                             <button className="btn rounded-circle" style={{ backgroundColor: "#EDA415" }} ><img src="images/shopping-cart.png" alt="" /></button>
                         </div>
                     </div>
@@ -68,7 +70,7 @@ export default function Frame53() {
               }
             `}
             </style>
-            <div>
+            <div className="container">
                 <div className="row">
                     <div className="col-7">
                         <div className="row">
