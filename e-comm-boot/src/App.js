@@ -7,6 +7,7 @@ import Catalogies1 from './components/catalogi1';
 import SubproductCard from './components/subProductCard';
 import Sale from './components/sale';
 import Frame53 from './components/frame53';
+import TripleFrame from './components/tripleFrame';
 
 
 
@@ -21,6 +22,7 @@ function App() {
       <SubproductCard />
       <Sale />
       <Frame53/>
+      <TripleFrame/>
     </div>
   );
 
