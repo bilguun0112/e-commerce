@@ -1,9 +1,9 @@
 import Button from 'react-bootstrap/Button';
-
+import AliceCarousel from 'react-alice-carousel'
 import product from '../Data/product';
 
 
-export default function Banner() {
+export default function Banner1() {
     // const e = product[0];
     const mainBanner = product.map(props => {
         console.log(props.id);
@@ -70,7 +70,9 @@ export default function Banner() {
     }
     `}
             </style>
+            <AliceCarousel>
             {mainBanner}
+            </AliceCarousel>
         </>
     )
 }
