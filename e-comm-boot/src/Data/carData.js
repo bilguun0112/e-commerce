@@ -229,6 +229,30 @@ const carData =
         },
         {
             device: 'Game console',
+            itemName: 'PlayStation Vi-Ta',
+            id: "28",
+            img: 'https://i.ebayimg.com/images/g/TcwAAOSwo1FgWKIa/s-l400.jpg',
+            price: '245 $'
+
+        },
+        {
+            device: 'Game console',
+            itemName: 'PlayStation Vi-Ta',
+            id: "28",
+            img: 'https://i.ebayimg.com/images/g/TcwAAOSwo1FgWKIa/s-l400.jpg',
+            price: '245 $'
+
+        },
+        {
+            device: 'Game console',
+            itemName: 'PlayStation Vi-Ta',
+            id: "28",
+            img: 'https://i.ebayimg.com/images/g/TcwAAOSwo1FgWKIa/s-l400.jpg',
+            price: '245 $'
+
+        },
+        {
+            device: 'Game console',
             itemName: 'PlayStation 4 Slim',
             id: "29",
             img: 'https://imageio.forbes.com/specials-images/imageserve/57d083a831358e16c5895c36/960x960.jpg?height=400&width=400&fit=bounds',

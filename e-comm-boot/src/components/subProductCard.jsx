@@ -6,7 +6,7 @@ const SubproductCard = () => {
     const settings = {
         className: "center",
         centerMode: false,
-        infinite: false,
+        infinite: true,
         centerPadding: "60px",
         slidesToShow: 2,
         speed: 1000,
