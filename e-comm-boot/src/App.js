@@ -8,18 +8,23 @@ import SubproductCard from './components/subProductCard';
 import Sale from './components/sale';
 import Frame53 from './components/frame53';
 import QuadFrame from './components/tripleFrame';
+import wishList from './Data/wish';
+import { useState } from 'react';
 
 
 
 function App() {
+  const [wish, setWish] = useState(wishList)
+
+
   return (
     <div className="container">
       <Help />
-      <Search />
+      <Search wish={wish}/>
       <MainMenu />
       <Banner />
       <Catalogies1 />
-      <SubproductCard />
+      <SubproductCard wish={wish} setWish={setWish}/>
       <Sale />
       <Frame53/>
       <QuadFrame/>
