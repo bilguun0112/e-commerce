@@ -10,6 +10,7 @@ import Frame53 from './components/frame53';
 import QuadFrame from './components/tripleFrame';
 import wishList from './Data/wish';
 import { useState } from 'react';
+import Footer from './components/footer';
 
 
 
@@ -28,6 +29,7 @@ function App() {
       <Sale />
       <Frame53/>
       <QuadFrame/>
+      <Footer/>
     </div>
   );
 
