@@ -11,6 +11,7 @@ import QuadFrame from './components/tripleFrame';
 import wishList from './Data/wish';
 import { useState } from 'react';
 import Footer from './components/footer';
+import ModalBody from './components/showModal';
 
 
 
