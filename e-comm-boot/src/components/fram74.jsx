@@ -12,7 +12,7 @@ export default function Frame74() {
             <div className="border border-1 rounded-3 p-4 m-2">
                 <div className="d-flex align-items-center gap-3">
                     <div>
-                        <img className="p-1" src={comm.img} alt="" style={{
+                        <img className="p-1 img-fluid" src={comm.img} alt="" style={{
                             width: "318px",
                             height: "288px",
                             borderRadius: "20px"

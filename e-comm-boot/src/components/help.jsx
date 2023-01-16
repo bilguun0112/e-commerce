@@ -1,4 +1,5 @@
 import { useSlotProps } from "@mui/base"
+import { useState } from "react";
 import wishList from "../Data/wish"
 
 
@@ -17,6 +18,20 @@ function Help() {
 }
 
 function Search(props) {
+    const [list, setList] = useState(false)
+
+    const hello = props.wish.map(el => {
+        return(
+            <div className="d-flex text-dark align-items-center bg-primary m-2">
+                <img src={el.img} alt="" style={{width: "100px",heigth: "50px"}} className="rounded-5 p-1"/>
+                <div className="text-center p-2">
+                    <div>{el.itemName}</div>
+                    <div>{el.price}</div>
+                </div>
+            </div>
+        )
+    })
+
     console.log('myProps', props);
     return (
         <>
@@ -38,9 +53,16 @@ function Search(props) {
                         <img src="images/user.png" alt="" />
                         <p className="m-0">Sign in</p>
                     </div>
-                    <div className="d-flex gap-2">
+                    <div className="d-flex gap-2" >
                         <div>
-                            <img src="images/heart.png" alt="" />
+                            <img src="images/heart.png" alt="" onClick={()=> setList(true)} style={{position: "relative"}}/>
+                            {
+                                list ? 
+                                <div style={{position: "absolute"}}>
+                                    {hello}
+                                    {/* <button className="btn btn-primary" onClick={()=> setList(false)}>Close</button> */}
+                                </div> : ""
+                            }
                         </div>
 
                         <p className="m-0 rounded-circle bg-warning px-1">{props.wish.length}</p>

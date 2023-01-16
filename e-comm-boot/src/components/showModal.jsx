@@ -56,8 +56,8 @@ export default function ModalBody() {
                         <div className="d-flex flex-column gap-3">
                             <div className="d-flex gap-3">
                                 Color :
-                                <input type="radio" />
-                                <input type="radio" />
+                                <input type="radio" name="gender"/>
+                                <input type="radio" name="gender"/>
                             </div>
                             <div className="d-flex gap-3">
                                 <div>
