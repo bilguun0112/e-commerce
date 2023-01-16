@@ -7,17 +7,11 @@ import { Search } from "./help";
 
 const SubproductCard = (props) => {
 
-    function handleClicker(id){
-        console.log('clicked', id);
+    function handleClicker(baraa){
+        console.log('clicked', baraa);
         // event.preventDefault();
         // console.log(event);
-        const product = {
-            productId : id.id
-        }
-        props.setWish([...props.wish,product]);
-
-
-        
+        props.setWish([...props.wish,baraa]);
     }
 
 
