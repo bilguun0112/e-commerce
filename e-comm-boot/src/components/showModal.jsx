@@ -10,7 +10,7 @@ export default function ModalBody() {
         <>
             <style type="text/css">
                 {`
-             .btn-warning {
+             .btn-secondary {
                 background-color: #EDA415;
                 color: white;
                 padding-top: 19.5px;
@@ -72,8 +72,8 @@ export default function ModalBody() {
                                 <div>Quality : </div>
                             </div>
                             <div className="d-flex gap-4">
-                                <Button variant="warning">Add to cart</Button>
-                                <Button variant="warning">But it now</Button>
+                                <Button variant="secondary">Add to cart</Button>
+                                <Button variant="secondary">But it now</Button>
                                 <button className="btn" ><img src="images/heart.png" alt="" style={{ backgroundColor: "#EEEEEE", borderRadius: "50%", padding: "20px" }} /></button>
                             </div>
                         </div>
