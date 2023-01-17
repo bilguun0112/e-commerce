@@ -2,8 +2,6 @@ import { useState } from "react";
 import Slider from "react-slick"
 import carData from "../Data/carData"
 import HalfRating from "./ratingStar";
-import wishList from "../Data/wish";
-import { Search } from "./help";
 
 const SubproductCard = (props) => {
     const [heart, setHeart] = useState(false)

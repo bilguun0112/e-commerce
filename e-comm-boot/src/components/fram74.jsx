@@ -7,9 +7,9 @@ export default function Frame74() {
     }
 
 
-    const feedBacks = pictures.map(comm => {
+    const feedBacks = pictures.map((comm,idx) => {
         return (
-            <div className="border border-1 rounded-3 p-4 m-2">
+            <div key={idx} className="border border-1 rounded-3 p-4 m-2">
                 <div className="d-flex align-items-center gap-3">
                     <div>
                         <img className="p-1 img-fluid" src={comm.img} alt="" style={{

@@ -3,9 +3,9 @@ import AliceCarousel from 'react-alice-carousel'
 import Button from 'react-bootstrap/Button';
 
 export default function Banner() {
-    const images = product.map(data => {
+    const images = product.map((data,idx) => {
         return (
-            <div className="d-flex justify-content-between container padd">
+            <div key={idx} className="d-flex justify-content-between container padd">
                 <div className='d-flex flex-column justify-content-center'>
                     <h1>{data.title}</h1>
                     <div>
