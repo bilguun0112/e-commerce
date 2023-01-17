@@ -7,9 +7,9 @@ export default function Frame66() {
     }
 
 
-    const feedBack = comment.map(comm => {
+    const feedBack = comment.map((comm,idx) => {
         return (
-            <div className="border border-1 rounded-3 p-4 m-2">
+            <div key={idx} className="border border-1 rounded-3 p-4 m-2">
                 <div className="d-flex align-items-center gap-5">
                     <div >
                         <img className="rounded-circle p-1" src={comm.img} alt="" style={{ width: "90px", heigth: "90px", border: "2px dashed #EDA415" }} />

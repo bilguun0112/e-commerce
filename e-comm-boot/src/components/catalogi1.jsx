@@ -20,9 +20,9 @@ const responsive = {
         items: 1
     }
 };
-const slides = products.map(dev => {
+const slides = products.map((dev ,idx) => {
     return (
-        <div className="d-flex justify-content-evenly align-items-center" >
+        <div key={idx} className="d-flex justify-content-evenly align-items-center" >
             <div className='d-flex justify-content-between h-75 align-items-center border rounded p-3' style={{ width: "338px" }}>
                 <img src={dev.img} alt="" style={{ width: "154px", height: "94px" }} className="p-3" />
                 <div>
