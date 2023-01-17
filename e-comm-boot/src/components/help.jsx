@@ -55,13 +55,13 @@ function Search(props) {
                     </div>
                     <div className="d-flex gap-2" >
                         <div>
-                            <img src="images/heart.png" alt="" onClick={()=> setList(true)} style={{position: "relative"}}/>
+                        <img src="images/heart.png" onClick={() => setList(!list)} />
                             {
                                 list ? 
-                                <div style={{position: "absolute"}}>
+                                <div className="text-center" style={{position: "absolute",zIndex: "1"}}>
                                     {hello}
-                                    {/* <button className="btn btn-primary" onClick={()=> setList(false)}>Close</button> */}
                                 </div> : ""
+    
                             }
                         </div>
 

@@ -6,15 +6,21 @@ import wishList from "../Data/wish";
 import { Search } from "./help";
 
 const SubproductCard = (props) => {
-
+    const [heart, setHeart] = useState(false)
     function handleClicker(baraa){
-        console.log('clicked', baraa);
-        // event.preventDefault();
-        // console.log(event);
         props.setWish([...props.wish,baraa]);
     }
+    function handleClickerRes(baraa){
+       const filtered = props.wish.filter(medku => {
+        if(medku !== baraa){
+            return (
+                medku
+            )
+        }
+       })
 
-
+       props.setWish([...filtered])
+    }
 
     const settings = {
         className: "center",
@@ -28,14 +34,19 @@ const SubproductCard = (props) => {
         slidesPerRow: 2,
         dots: true,
     };
-    const result = carData.map(item =>
+    const result = carData.map((item,idx) =>
 
-        <div>
+        <div key={idx}>
             <div className="border border-1 rounded m-3">
                 <div className="d-flex align-items-start justify-content-center p-3">
                     <img src={item.img} style={{ width: "60%", height: "55%" }} alt="" />
                     <div className="mt-4" >
-                        <button onClick={()=> {handleClicker(item)}} className="btn zero"><img src="images/heart.png" alt="" style={{ backgroundColor: "#B3D4E5" , borderRadius: "50%"}} className="p-2 " /></button>
+                        {
+                            heart ? 
+                            <button onClick={()=> {handleClicker(item); setHeart(false)}} className="btn zero"><img src="images/heart.png" alt="" style={{ backgroundColor: "#B3D4E5" , borderRadius: "50%"}} className="p-2 " /></button>
+                            : 
+                            <button onClick={()=> {handleClickerRes(item); setHeart(true)}} className="btn zero"><img src="images/heart.png" alt="" style={{ backgroundColor: "green" , borderRadius: "50%"}} className="p-2 " /></button>
+                        }
                     </div>
                 </div>
                 <div className="d-flex align-items-center justify-content-between mx-2 p-3">
@@ -57,14 +68,7 @@ const SubproductCard = (props) => {
 
     return (
         <div>
-            {/* <style type="text/css">
-                {`
-                .zero:focus {
-                    border: none;
-                    outline: none;
-                }
-                `}
-            </style> */}
+
             <Slider {...settings}>
                 {result}
             </Slider>
