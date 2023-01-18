@@ -32,6 +32,7 @@ function App() {
       <QuadFrame/>
       <Footer/>
       <ModalBody/>
+
     </div>
   );
 
