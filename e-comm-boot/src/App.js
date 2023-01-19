@@ -8,7 +8,6 @@ import SubproductCard from './components/subProductCard';
 import Sale from './components/sale';
 import Frame53 from './components/frame53';
 import QuadFrame from './components/tripleFrame';
-import wishList from './Data/wish';
 import { useState } from 'react';
 import Footer from './components/footer';
 import ModalBody from './components/showModal';
@@ -22,7 +21,7 @@ function App() {
   return (
     <div className="container">
       <Help />
-      <Search wish={wish} />
+      <Search wish={wish} setWish={setWish} />
       <MainMenu />
       <Banner />
       <Catalogies1 />

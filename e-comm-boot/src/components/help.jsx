@@ -1,6 +1,6 @@
-import { useSlotProps } from "@mui/base"
+
 import { useState } from "react";
-import wishList from "../Data/wish"
+import { XCircle } from "react-bootstrap-icons";
 
 
 function Help() {
@@ -20,26 +20,32 @@ function Help() {
 function Search(props) {
     const [list, setList] = useState(false)
 
-    const hello = props.wish.map(el => {
-        return(
-            <div className="d-flex text-dark align-items-center bg-primary m-2">
-                <img src={el.img} alt="" style={{width: "100px",heigth: "50px"}} className="rounded-5 p-1"/>
-                <div className="text-center p-2">
-                    <div>{el.itemName}</div>
-                    <div>{el.price}</div>
+    const hello = props.wish.map((el, index) => {
+        return (
+            <div key={index}>
+                <div className="d-flex text-dark align-items-center bg-primary m-2">
+                    <img src={el.img} alt="" style={{ width: "100px", heigth: "50px" }} className="rounded-5 p-1" />
+                    <div className="text-center p-2">
+                        <div>{el.itemName}</div>
+                        <div>{el.price}</div>
+                    </div>
+                    <button class="btn" onClick={() => {
+                        console.log('remove from wish list');
+                        props.setWish(
+                            props.wish.filter(wish => wish.id !== el.id)
+                        )
+                    }}>
+                        <XCircle />
+                    </button>
                 </div>
+
+
             </div>
         )
     })
 
-    console.log('myProps', props);
     return (
         <>
-            <style type="text/css">
-                {`
-
-                `}
-            </style>
             <div className="container search text-light d-flex justify-content-between px-5 py-3">
                 <div className="d-flex align-items-center gap-5">
                     <img src="images/logo 1.png" alt="" />
@@ -55,13 +61,12 @@ function Search(props) {
                     </div>
                     <div className="d-flex gap-2" >
                         <div>
-                        <img src="images/heart.png" onClick={() => setList(!list)} />
+                            <img src="images/heart.png" onClick={() => setList(!list)} alt="" />
                             {
-                                list ? 
-                                <div className="text-center" style={{position: "absolute",zIndex: "1"}}>
-                                    {hello}
-                                </div> : ""
-    
+                                list ?
+                                    <div className="text-center" style={{ position: "absolute", zIndex: "1" }}>
+                                        {hello}
+                                    </div> : ""
                             }
                         </div>
 
