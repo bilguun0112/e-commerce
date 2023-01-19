@@ -1,6 +1,7 @@
 
 import { useState } from "react";
 import { XCircle } from "react-bootstrap-icons";
+import { Link } from "react-router-dom";
 
 
 function Help() {
@@ -19,7 +20,6 @@ function Help() {
 
 function Search(props) {
     const [list, setList] = useState(false)
-
     const hello = props.wish.map((el, index) => {
         return (
             <div key={index}>
@@ -57,7 +57,7 @@ function Search(props) {
                 <div className="d-flex gap-3 align-items-center ">
                     <div className="d-flex gap-3">
                         <img src="images/user.png" alt="" />
-                        <p className="m-0">Sign in</p>
+                        <Link to="/signin" style={{ textDecoration: "none", color: "#Ffffff" }}>Sign Up</Link>
                     </div>
                     <div className="d-flex gap-2" >
                         <div>
