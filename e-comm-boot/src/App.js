@@ -16,22 +16,22 @@ import ModalBody from './components/showModal';
 
 
 function App() {
-  const [wish, setWish] = useState(wishList)
+  const [wish, setWish] = useState([])
 
 
   return (
     <div className="container">
       <Help />
-      <Search wish={wish}/>
+      <Search wish={wish} />
       <MainMenu />
       <Banner />
       <Catalogies1 />
-      <SubproductCard wish={wish} setWish={setWish}/>
+      <SubproductCard wish={wish} setWish={setWish} />
       <Sale />
-      <Frame53/>
-      <QuadFrame/>
-      <Footer/>
-      <ModalBody/>
+      <Frame53 />
+      <QuadFrame />
+      <Footer />
+      <ModalBody />
 
     </div>
   );

@@ -1,24 +1,10 @@
-import { useState } from "react";
+
 import Slider from "react-slick"
 import carData from "../Data/carData"
 import HalfRating from "./ratingStar";
-
+import { BalloonHeart, BalloonHeartFill } from 'react-bootstrap-icons';
 const SubproductCard = (props) => {
-    const [heart, setHeart] = useState(false)
-    function handleClicker(baraa){
-        props.setWish([...props.wish,baraa]);
-    }
-    function handleClickerRes(baraa){
-       const filtered = props.wish.filter(medku => {
-        if(medku !== baraa){
-            return (
-                medku
-            )
-        }
-       })
 
-       props.setWish([...filtered])
-    }
 
     const settings = {
         className: "center",
@@ -32,35 +18,47 @@ const SubproductCard = (props) => {
         slidesPerRow: 2,
         dots: true,
     };
-    const result = carData.map((item,idx) =>
+    const result = carData.map((item, idx) => {
 
-        <div key={idx}>
-            <div className="border border-1 rounded m-3">
-                <div className="d-flex align-items-start justify-content-center p-3">
-                    <img src={item.img} style={{ width: "60%", height: "55%" }} alt="" />
-                    <div className="mt-4" >
-                        {
-                            heart ? 
-                            <button onClick={()=> {handleClicker(item); setHeart(false)}} className="btn zero"><img src="images/heart.png" alt="" style={{ backgroundColor: "#B3D4E5" , borderRadius: "50%"}} className="p-2 " /></button>
-                            : 
-                            <button onClick={()=> {handleClickerRes(item); setHeart(true)}} className="btn zero"><img src="images/heart.png" alt="" style={{ backgroundColor: "green" , borderRadius: "50%"}} className="p-2 " /></button>
-                        }
-                    </div>
-                </div>
-                <div className="d-flex align-items-center justify-content-between mx-2 p-3">
-                    <div>
-                        <div>{item.itemName}</div>
-                        <div>{item.price}</div>
-                        <div>
-                            <HalfRating />
+        const liked = props.wish.filter((wish) => wish.id === item.id)[0];
+        return (
+
+            <div key={idx}>
+                <div className="border border-1 rounded m-3">
+                    <div className="d-flex align-items-start justify-content-evenly p-3">
+                        <img src={item.img} style={{ width: "60%", height: "55%" }} alt="" />
+                        <div className="mt-4" >
+                            <button onClick={() => {
+
+                                if (!liked) {
+                                    props.setWish([...props.wish, item])
+                                } else {
+                                    props.setWish(props.wish.filter(w => w !== item))
+                                }
+                            }} className="btn">
+                                {
+                                    liked ? <BalloonHeartFill /> : <BalloonHeart />
+                                }
+                            </button>
                         </div>
                     </div>
-                    <div>
-                        <button className="btn rounded-circle p-2" style={{ backgroundColor: "#EDA415" }} ><img src="images/shopping-cart.png" alt="" /></button>
+                    <div className="d-flex align-items-center justify-content-between mx-2 p-3">
+                        <div>
+                            <div>{item.itemName}</div>
+                            <div>{item.price}</div>
+                            <div>
+                                <HalfRating />
+                            </div>
+                        </div>
+                        <div>
+                            <button className="btn rounded-circle p-2" style={{ backgroundColor: "#EDA415" }} ><img src="images/shopping-cart.png" alt="" /></button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        )
+    }
+
 
     )
 
