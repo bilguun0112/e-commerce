@@ -12,6 +12,7 @@ import ModalBody from './components/showModal';
 
 export default function MainHome() {
     const [wish, setWish] = useState([])
+    const [cart, setCart] = useState([])
     return (
         <div className="container">
             <Help />
