@@ -3,6 +3,7 @@ import Slider from "react-slick"
 import carData from "../Data/carData"
 import HalfRating from "./ratingStar";
 import { BalloonHeart, BalloonHeartFill } from 'react-bootstrap-icons';
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 const SubproductCard = (props) => {
 
 
@@ -51,7 +52,7 @@ const SubproductCard = (props) => {
                             </div>
                         </div>
                         <div>
-                            <button className="btn rounded-circle p-2" style={{ backgroundColor: "#EDA415" }} ><img src="images/shopping-cart.png" alt="" /></button>
+                            <button className="btn rounded-circle p-2" style={{ backgroundColor: "#EDA415" }} ><AddShoppingCartIcon /></button>
                         </div>
                     </div>
                 </div>
