@@ -74,7 +74,7 @@ function Search(props) {
                     </div>
                     <div className="d-flex gap-2">
                         <img src="images/shopping-cart.png" alt="" />
-                        <p className="m-0 rounded-circle bg-warning px-1">0</p>
+                        <p className="m-0 rounded-circle bg-warning px-1">{props.cart.length}</p>
                     </div>
                 </div>
             </div>

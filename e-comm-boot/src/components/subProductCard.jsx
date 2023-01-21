@@ -4,6 +4,7 @@ import carData from "../Data/carData"
 import HalfRating from "./ratingStar";
 import { BalloonHeart, BalloonHeartFill } from 'react-bootstrap-icons';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 const SubproductCard = (props) => {
 
 
@@ -22,6 +23,7 @@ const SubproductCard = (props) => {
     const result = carData.map((item, idx) => {
 
         const liked = props.wish.filter((wish) => wish.id === item.id)[0];
+        const added = props.cart.filter((cart) => cart.id === item.id)[0];
         return (
 
             <div key={idx}>
@@ -52,7 +54,15 @@ const SubproductCard = (props) => {
                             </div>
                         </div>
                         <div>
-                            <button className="btn rounded-circle p-2" style={{ backgroundColor: "#EDA415" }} ><AddShoppingCartIcon /></button>
+                            <button className="btn rounded-circle p-2" style={{ backgroundColor: "#EDA415" }} onClick={() => {
+                                if (!added) {
+                                    props.setCart([...props.cart, item])
+                                } else {
+                                    props.setCart(props.cart.filter(c => c !== item))
+                                }
+                            }}>{
+                                    added ? <ShoppingCartIcon /> : <AddShoppingCartIcon />
+                                }</button>
                         </div>
                     </div>
                 </div>

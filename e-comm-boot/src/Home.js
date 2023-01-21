@@ -16,13 +16,13 @@ export default function MainHome() {
     return (
         <div className="container">
             <Help />
-            <Search wish={wish} setWish={setWish} />
+            <Search wish={wish} setWish={setWish} cart={cart} />
             <MainMenu />
             <Banner />
             <Catalogies1 />
-            <SubproductCard wish={wish} setWish={setWish} />
+            <SubproductCard wish={wish} setWish={setWish} cart={cart} setCart={setCart} />
             <Sale />
-            <Frame53 />
+            <Frame53 cart={cart} setCart={setCart} />
             <QuadFrame />
             <Footer />
             <ModalBody />
