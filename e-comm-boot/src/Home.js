@@ -10,9 +10,8 @@ import { useState } from 'react';
 import Footer from './components/footer';
 import ModalBody from './components/showModal';
 
-export default function MainHome() {
-    const [wish, setWish] = useState([])
-    const [cart, setCart] = useState([])
+
+export default function MainHome({ wish, setWish, cart, setCart }) {
     return (
         <div className="container">
             <Help />
