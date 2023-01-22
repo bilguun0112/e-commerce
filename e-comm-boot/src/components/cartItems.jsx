@@ -1,17 +1,19 @@
-export default function CartItems() {
+import { XCircle } from "react-bootstrap-icons"
+
+export default function CartItems({ name, price, img }) {
 
     return (
         <div className="d-flex align-items-center py-4" style={{ borderBottom: "2px solid #C3C3C3" }}>
             <div className="d-flex align-items-center justify-content-between" style={{ width: "32.7%" }} >
-                <img style={{ width: "136px", height: "119px" }} src="https://i.ebayimg.com/images/g/TcwAAOSwo1FgWKIa/s-l400.jpg" alt="" />
+                <img style={{ width: "136px", height: "119px" }} src={img} alt="" />
                 <div className="d-flex flex-column gap-3">
-                    <div>Play game</div>
+                    <div>{name}</div>
                     <div>Color : Green</div>
                     <div>Size : 30</div>
                 </div>
             </div>
             <div className="text-center" style={{ width: "18.65%" }} >
-                Price
+                {price}
             </div>
             <div className="text-center" style={{ width: "18.65%" }} >
                 Quantity
@@ -19,7 +21,7 @@ export default function CartItems() {
             <div className="text-center" style={{ width: "30%", textAlign: "center" }} >
                 Subtotal
             </div>
-            <button>x</button>
+            <button className="btn"> <XCircle /></button>
         </div>
     )
 }
