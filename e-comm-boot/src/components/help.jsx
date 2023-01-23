@@ -48,7 +48,7 @@ function Search(props) {
         <>
             <div className="container search text-light d-flex justify-content-between px-5 py-3">
                 <div className="d-flex align-items-center gap-5">
-                    <img src="images/logo 1.png" alt="" />
+                    <Link to="/"><img src="images/logo 1.png" alt="" /></Link>
                     <div class="input-group top-search" style={{ width: "27.375rem" }}>
                         <input type="text" class="form-control" placeholder="Search any things" aria-label="Search any things" aria-describedby="button-addon2" />
                         <button class="btn btn-warning text-light" type="button" id="button-addon2">Search</button>
@@ -75,6 +75,7 @@ function Search(props) {
                     <div className="d-flex gap-2">
                         <img src="images/shopping-cart.png" alt="" />
                         <p className="m-0 rounded-circle bg-warning px-1">{props.cart.length}</p>
+                        <Link to="/cart" style={{ textDecoration: "none", color: "#Ffffff" }}>Cart</Link>
                     </div>
                 </div>
             </div>

@@ -1,11 +1,14 @@
 {
-	"folders": [
-		{
-			"path": "../../.."
-		},
-		{
-			"path": "../../../../React-lesson-2023"
-		}
-	],
-	"settings": {}
+  "folders": [
+    {
+      "path": "../../.."
+    },
+    {
+      "path": "../../../../React-lesson-2023"
+    },
+    {
+      "path": "../../../../coreui-free-react-admin-template-main"
+    }
+  ],
+  "settings": {}
 }
