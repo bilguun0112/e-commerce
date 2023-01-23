@@ -20,7 +20,7 @@ const responsive = {
         items: 1
     }
 };
-const slides = products.map((dev ,idx) => {
+const slides = products.map((dev, idx) => {
     return (
         <div key={idx} className="d-flex justify-content-evenly align-items-center" >
             <div className='d-flex justify-content-between h-75 align-items-center border rounded p-3' style={{ width: "338px" }}>
@@ -38,21 +38,21 @@ const slides = products.map((dev ,idx) => {
 export default function catalogi1() {
     return (
 
-       <div className="my-5">
-         <Carousel responsive={responsive}
-            swipeable={true}
-            draggable={true}
-            showDots={false}
-            ssr={true} // means to render carousel on server-side.
-            infinite={true}
-            autoPlaySpeed={1000}
-            keyBoardControl={true}
-            customTransition="transform 500ms ease-in-out"
-            transitionDuration={1000}
-            dotListClass="custom-dot-list-style"
-            itemClass="carousel-item-padding-40-px">
-            {slides}
-        </Carousel>
-       </div>
+        <div className="my-5">
+            <Carousel responsive={responsive}
+                swipeable={true}
+                draggable={true}
+                showDots={false}
+                ssr={true} // means to render carousel on server-side.
+                infinite={true}
+                autoPlaySpeed={1000}
+                keyBoardControl={true}
+                customTransition="transform 500ms ease-in-out"
+                transitionDuration={1000}
+                dotListClass="custom-dot-list-style"
+                itemClass="carousel-item-padding-40-px">
+                {slides}
+            </Carousel>
+        </div>
     )
 }

@@ -2,11 +2,15 @@ import { Button } from "react-bootstrap";
 import CartItems from "./cartItems";
 import Dropdown from 'react-bootstrap/Dropdown';
 import Country from "../Data/country";
-import cartData from "../Data/cart";
-import product from "../Data/product";
+import { useState } from "react";
 
-export default function Cart({ cartProduct }) {
 
+export default function Cart({ cart, setCart }) {
+    const [subtotal, setSubtotal] = useState(0);
+
+    const updateSubtotal = (newSubtotal) => {
+        setSubtotal(newSubtotal);
+    }
 
 
     const country = Country.map((c, idx) => {
@@ -14,12 +18,12 @@ export default function Cart({ cartProduct }) {
             <Dropdown.Item key={idx} href="#/action-1">{c.countrys}</Dropdown.Item>
         )
     })
-    console.log(cartProduct)
-    // const cartProduct = cartData.map((product, idx) => {
-    //     return (
-    //         <CartItems key={idx} price={product.price} name={product.itemName} img={product.price} />
-    //     )
-    // })
+    console.log('cartiin array', cart)
+    const cartProducts = cart.map((product, idx) => {
+        return (
+            <CartItems key={idx} price={product.price} name={product.itemName} img={product.img} cart={cart} setCart={setCart} item={product} upSub={updateSubtotal} />
+        )
+    })
     return (
         <>
             <style type="text/css">
@@ -73,16 +77,18 @@ export default function Cart({ cartProduct }) {
             <div className="container d-flex gap-3 my-5">
                 <div className="container">
                     <div className="d-flex px-5" style={{ color: "#232323", fontSize: "20.68px", paddingTop: "10px", paddingBottom: "15px", backgroundColor: "#E2F4FF" }}>
-                        <div style={{ width: "32.7%" }} >Product</div>
+                        <div style={{ width: "40.7%" }} >Product</div>
                         <div style={{ width: "18.65%" }} >Price</div>
                         <div style={{ width: "18.65%" }} >Quantity</div>
-                        <div style={{ width: "30%", textAlign: "center" }} >Subtotal</div>
+                        <div style={{ width: "22%", textAlign: "center" }} >Subtotal</div>
                     </div>
-                    {/* {cartProduct} */}
+                    {cartProducts}
                     <div className="d-flex justify-content-evenly" style={{ paddingTop: "36px" }}>
                         <Button variant="light">Continue shopping</Button>
                         <Button variant="outline-secondary">Update Cart</Button>
-                        <Button variant="outline-danger">Clear Cart</Button>
+                        <Button variant="outline-danger" onClick={() => {
+                            setCart(cart = [])
+                        }}>Clear Cart</Button>
                     </div>
                 </div>
 
@@ -94,7 +100,7 @@ export default function Cart({ cartProduct }) {
                     <div className="container px-4">
                         <div className="d-flex justify-content-between p-4" style={{ borderBottom: "2px solid #C3C3C3", color: "#232323", fontSize: "20.68px", lineHeight: "30px" }}>
                             <div>Subtotal</div>
-                            <div>Price</div>
+                            <div>{subtotal}</div>
                         </div>
                         <div className=" p-4" style={{ borderBottom: "2px solid #C3C3C3" }}>
                             <div className="d-flex coupon" style={{ borderRadius: "20px", border: "3px solid #DFDFDF" }}>
@@ -116,7 +122,7 @@ export default function Cart({ cartProduct }) {
                                 </Dropdown.Menu>
                             </Dropdown>
                         </div>
-                        <div className="d-flex justify-content-between pb-4">
+                        <div className="d-flex justify-content-between p-4" style={{ color: "#232323", fontSize: "20.68px", lineHeight: "30px" }}>
                             <div>Total amount</div>
                             <div>Price</div>
                         </div>
