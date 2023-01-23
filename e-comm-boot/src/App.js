@@ -20,7 +20,6 @@ function App() {
         <Route path='/signin' element={<SignIn />} />
         <Route path='/login' element={<LogIn />} />
         <Route path='/cart' element={<CartPage wish={wish} setWish={setWish} cart={cart} />} />
-
       </Routes>
     </>
   );
