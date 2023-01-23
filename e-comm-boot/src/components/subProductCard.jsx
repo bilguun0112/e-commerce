@@ -48,7 +48,7 @@ const SubproductCard = (props) => {
                     <div className="d-flex align-items-center justify-content-between mx-2 p-3">
                         <div>
                             <div>{item.itemName}</div>
-                            <div>{item.price}</div>
+                            <div>{item.price} $</div>
                             <div>
                                 <HalfRating />
                             </div>
