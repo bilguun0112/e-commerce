@@ -100,7 +100,7 @@ export default function Cart({ cart, setCart }) {
                     <div className="container px-4">
                         <div className="d-flex justify-content-between p-4" style={{ borderBottom: "2px solid #C3C3C3", color: "#232323", fontSize: "20.68px", lineHeight: "30px" }}>
                             <div>Subtotal</div>
-                            <div>{subtotal}</div>
+                            <div>{subtotal} $</div>
                         </div>
                         <div className=" p-4" style={{ borderBottom: "2px solid #C3C3C3" }}>
                             <div className="d-flex coupon" style={{ borderRadius: "20px", border: "3px solid #DFDFDF" }}>
